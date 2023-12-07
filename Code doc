@@ -1,0 +1,15 @@
+[2023/12/06] - the white arrow
+Trouble at commiting files to github repository. Coudln't open folder on github website
+Problem was sub-rep .git folder under 'sample' folder
+
+fix
+1. move to where sub-rep .git file is
+2. rm -rf .git
+3. move to folder which you want to push github
+4. delete .git folder afain
+5. .git init
+6. add, commit, remote add origin, push --force
+
+
+
+
