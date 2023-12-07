@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\Feature\\HomeTest::testBody":7},"times":{"Tests\\Feature\\HomeTest::test_example":0.144,"Tests\\Feature\\HomeTest::testStatusCode":0.005,"Tests\\Feature\\HomeTest::testBody":0.005}}
