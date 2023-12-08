@@ -11,5 +11,16 @@ fix
 6. add, commit, remote add origin, push --force
 
 
+[2023/12/07] - namespace prefix
+sail artisan event:generate
+made listener class under 'providers' directory.
+It was because of prefix on directory based on namespace.
+
+fix
+added specified directory for listener by adding use DIR
 
 
+[2023/12/08]
+Unresolvable dependency resolving [Parameter #0 [ <required> string $name ]] in class Illuminate\Mail\Mailer
+
+    
