@@ -23,4 +23,9 @@ added specified directory for listener by adding use DIR
 [2023/12/08]
 Unresolvable dependency resolving [Parameter #0 [ <required> string $name ]] in class Illuminate\Mail\Mailer
 
-    
+교재에 있던 코드로는 mailer class 를 정상적으로 호출할 수가 없어서 private $mailer 를 construct 하는 대신 
+handler 함수에서 Mail 클래스를 직접 호출하여 Mail::raw 함수를 실행 했다.
+
+
+
+

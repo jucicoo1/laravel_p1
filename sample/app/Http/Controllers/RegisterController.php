@@ -29,8 +29,7 @@ class RegisterController extends Controller
             'email' =>  $request->email,
             'password'  =>  Hash::make($request->password),
         ]);
-        log::debug('store called');
-
+        
         event(new Registered($user));
 
         return view('regist.complete', compact('user'));
