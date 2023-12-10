@@ -28,6 +28,9 @@ Route::get('/register', [App\Http\Controllers\RegisterController::class, 'create
 Route::post('/register', [App\Http\Controllers\RegisterController::class, 'store'])
     ->middleware('guest');
 
+Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])
+    ->middleware('guest');
+
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])
     ->middleware('guest')
     ->name('login');
@@ -39,4 +42,6 @@ Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
 
+Route::get('/user', [App\Http\Controllers\UserController::class, 'index']);
+Route::post('/user', [App\Http\Controllers\UserController::class, 'store']);
 

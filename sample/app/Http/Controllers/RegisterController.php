@@ -9,8 +9,6 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-use Illuminate\Support\Facades\Log;
-
 class RegisterController extends Controller
 {
     public function create() {
@@ -29,7 +27,7 @@ class RegisterController extends Controller
             'email' =>  $request->email,
             'password'  =>  Hash::make($request->password),
         ]);
-        
+
         event(new Registered($user));
 
         return view('regist.complete', compact('user'));
