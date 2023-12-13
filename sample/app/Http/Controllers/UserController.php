@@ -6,8 +6,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Contracts\View\Factory as ViewFctory;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 class RegisterController extends Controller
@@ -20,13 +20,28 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function store(Request $request):RedirectResponse {
+    // public function store(Request $request):RedirectResponse {
         
-    }
+    // }
 
     public function register(Request $request){
-        $name = $request->get('name');
-        $age = $request->get('age');
-        // ... continues
+        $rules = [
+            'name'  =>  ['required', 'max:20', 'ascii_alpha'],
+            'email'  =>  ['required', 'email', 'max:255'],
+        ];
+
+        $inputs = $request->all();
+        
+        Validator::extend('ascii_alpha', function($attribute, $value, $parameters){
+            return preg_match('/^[a-zA-Z]+$/', $value);
+        });
+
+        $validator = Validator::make($inputs, $rules);
+
+        if($validator->fails()){
+
+        }
+
+        $name = $request->input('name');
     }
 }
