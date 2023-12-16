@@ -37,35 +37,10 @@ class ListenerTest extends TestCase
             'password'  =>  'q1w2e3r4',
         );
 
-        // $event = Event::fakefor(function(){
-        //     $event = Event::assertDispatched(Registered::class);
-        //     return $event;
-        // });
-
-        // $app_name = 'app_name';
-        // new RegisteredListener($app_name, $user);
-
         $this->mock(\Illuminate\Contracts\Broadcasting\Factory::class)
         ->shouldReceive('event')
         ->with(Registered::class)
         ->once();
     }
-
-    // public function test_handler(): void
-    // { 
-    //     $user = array(
-    //         'name'  =>  'listener',
-    //         'email' =>  'listen@listen.com',
-    //         'password'  =>  'q1w2e3r4',
-    //     );  
-    //     $event = Event::fakefor(function(){
-    //         $event = Event::assertDispatched(Registered::class);
-    //         return $event;
-    //     });
-        
-    //     // $event = new Registered($user);
-    //     $app_name = 'app_name';
-    //     (new RegisteredListener($app_name, $user))->handle($event);
-    // }
 
 }
