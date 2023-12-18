@@ -22,7 +22,6 @@ class ArticleResource extends JsonResource
             '_embeded'  =>  [
                 'comments'  =>  new CommentResourceCollection(
                     new Collection($this->resource['comments']),
-
                 ),
                 'user'  =>  new UserResource(
                     [
@@ -32,12 +31,9 @@ class ArticleResource extends JsonResource
                 ),
                 '_links'    =>  [
                     'self'  =>  [
-                        'href'  =>  sprintf(
-                            'https://example.com/article/%s',
-                            $this->resource['id']
-                        )
+                        'href'  =>  sprintf('https://example.com/article/%s', $this->resource['id']),
                     ]
-                ]
+                ],
             ]
         ];
     }
