@@ -12,7 +12,7 @@ use function rand;
 use function usleep;
 
 
-class StreamAction extends Controller
+final class StreamAction extends Controller
 {
     public function __invoke(): StreamedResponse
     {

@@ -45,5 +45,5 @@ Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout'])
 Route::get('/user', [App\Http\Controllers\UserController::class, 'index']);
 Route::post('/user', [App\Http\Controllers\UserController::class, 'store']);
 
-Route::get('/payload', 'ArticlePayloadAction');
+// Route::get('/payload', 'ArticlePayloadAction');
 

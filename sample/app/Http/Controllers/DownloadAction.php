@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use function response;
 
 
-class DownloadAction extends Controller
+final class DownloadAction extends Controller
 {
     public function __invoke(Request $request): BinaryFileResponse
     {

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\ArticleResource;
 
 
-class ArticlePayloadAction extends Controller
+final class ArticlePayloadAction extends Controller
 {
     public function __invoke(Request $request)
     {

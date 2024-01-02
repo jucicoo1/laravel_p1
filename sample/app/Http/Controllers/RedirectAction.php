@@ -11,7 +11,7 @@ use function response;
 use function redirect;
 
 
-class RedirectAction extends Controller
+final class RedirectAction extends Controller
 {
     public function __invoke(Request $request): RedirectResponse
     {
