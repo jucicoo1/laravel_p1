@@ -45,5 +45,7 @@ setting up environment to new laptop
 (3) provision
     -> add option to run command
     -> vagrant up --provision
-
+(4) vagrant ssh default passward
+    -> vagrant
+    
 
