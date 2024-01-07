@@ -58,4 +58,6 @@ Route::post('/user', [App\Http\Controllers\UserController::class, 'store']);
 
 // Route::get('/payload', 'ArticlePayloadAction');
 
+Route::post('/publishers', [App\Http\Controllers\PublisherAction::class, 'create']);
+
 require __DIR__.'/auth.php';

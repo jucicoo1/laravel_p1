@@ -20,4 +20,8 @@ class Author extends Model
     public function __construct(){
         $authors = \App\Models\Author::all();
     }
+
+    public function Book(){
+        return $this->hasMany('\App\Model\Book');
+    }
 }
