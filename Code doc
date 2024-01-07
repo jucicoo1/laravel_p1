@@ -31,3 +31,19 @@ handler 함수에서 Mail 클래스를 직접 호출하여 Mail::raw 함수를 �
 [2023/12/14]
 Puny texts to continue github strick
 
+
+[2024/01/07]
+# 1. New OS 
+setting up environment to new laptop
+
+#2. vagrant issue
+(1) version issue
+    -> vi /PATH/TO/Homestead/script/homestead.rb
+    -> change look up version from 13.0.0 to 12.0.0
+(2) VM issue
+    -> discard saved states
+(3) provision
+    -> add option to run command
+    -> vagrant up --provision
+
+
