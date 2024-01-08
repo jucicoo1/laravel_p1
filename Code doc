@@ -47,5 +47,6 @@ setting up environment to new laptop
     -> vagrant up --provision
 (4) vagrant ssh default passward
     -> vagrant
-    
 
+[2024/01/08]
+New OS setting day 2
