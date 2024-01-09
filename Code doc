@@ -50,3 +50,12 @@ setting up environment to new laptop
 
 [2024/01/08]
 New OS setting day 2
+
+[2024/01/09]
+==> homestead: Running provisioner: file...
+Guest-specific operations were attempted on a machine that is not
+ready for guest communication. This should not happen and a bug
+should be reported.
+
+<- gotta work on this bug
+
