@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('user_tokens', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('user_id', false, true);
+            $table->string('api_token', 60)->unique();
+            $table->timestamp('created_at')->useCurrentOnUpdate();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
